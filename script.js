@@ -23,7 +23,7 @@ const createChatLi = (message, className) => {
 
 const generateResponse = (chatElement) => {
   const API_URL =
-    "http://169.38.69.69:3000/api/v1/bots/eicherbot/converse/1234567890";
+    "http://169.38.69.69:3000/api/v1/bots/eicherbot/converse/1237567890";
   const messageElement = chatElement.querySelector("p");
   console.log(userMessage);
   // Define the properties and message for the API request
@@ -59,13 +59,16 @@ const generateResponse = (chatElement) => {
   fetch(API_URL, requestOptions)
     .then((res) => res.json())
     .then((data) => {
-      console.log("My Request", requestOptions);
-      let txt = data.responses[1].text;
-      console.log(txt);
+      console.log(data.responses);
+      let txt = {};
+      data.responses.forEach((element) => {
+        txt = element.text;
+      });
+
       let formatted = formatTextWithAsterisks(txt);
       messageElement.textContent = parseHTMLToPlainText(formatted);
 
-      console.log(parseHTMLToPlainText(formatted));
+      // console.log(parseHTMLToPlainText(formatted));
     })
     .catch(() => {
       // Error Message

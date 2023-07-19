@@ -11,7 +11,7 @@ click_to_record.addEventListener("click", function () {
       .map((result) => result.transcript)
       .join("");
 
-    document.getElementById("convert_text").innerHTML = transcript;
+    document.getElementById("convert_text").value = transcript;
     console.log(transcript);
   });
 
