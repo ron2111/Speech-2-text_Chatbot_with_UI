@@ -200,3 +200,20 @@ header h2 {
     display: block;
   }
 }
+
+.voice-btn{
+	padding: 2px 20px;
+
+  background: #734AE8;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 90%;
+  
+}
+
+.voice-btn:hover{
+  background: #4100f5;
+}
+

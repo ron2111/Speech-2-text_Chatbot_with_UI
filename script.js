@@ -42,11 +42,12 @@ const generateResponse = (chatElement) => {
   };
 
   function formatTextWithAsterisks(text) {
-    // Use a regular expression to find text within asterisks and wrap it with <strong> tags
+    // regular expression to find text within asterisks and wrap it with <strong> tags
     const formattedText = text.replace(/\*([^*]+)\*/g, "<b>$1</b>");
     return formattedText;
   }
   function parseHTMLToPlainText(htmlText) {
+    // HTM
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, "text/html");
     return doc.body.textContent;

@@ -9,6 +9,11 @@
     <!-- Google Fonts Link For Icons -->
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <link
@@ -35,13 +40,20 @@
         </li>
       </ul>
       <div class="chat-input">
+        <button class="voice-btn" id="click_to_record">
+          <i class="fa fa-microphone microphone-ico"></i>
+        </button>
         <textarea
+          id="convert_text"
           placeholder="Enter a message..."
           spellcheck="false"
           required
-        ></textarea>
+        >
+        </textarea>
         <span id="send-btn" class="material-symbols-rounded">send</span>
       </div>
     </div>
+    <!-- // speech to text  -->
+    <script type="text/javascript" src="s2t.js"></script>
   </body>
 </html>
